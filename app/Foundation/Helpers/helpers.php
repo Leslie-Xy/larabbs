@@ -22,6 +22,14 @@ if (!function_exists('route_class')) {
     }
 }
 
+if (!function_exists('category_nav_active')) {
+
+    function category_nav_active($category_id)
+    {
+        return active_class((if_route('categories.show') && if_route_param('category', $category_id)));
+    }
+}
+
 if (!function_exists('ImageUploadHandler')) {
 
     function ImageUploadHandler($file, $folder, $file_prefix, $max_width = false)
