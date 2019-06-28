@@ -23,7 +23,7 @@ class UsersController extends Controller
         $data = $request->all();
 
         if ($request->avatar) {
-            $result = ImageUploadHandler($request->avatar, 'avatars', $user->id);
+            $result = ImageUploadHandler($request->avatar, 'avatars', $user->id, 416);
             if ($result) {
                 $data['avatar'] = $result['path'];
             }
