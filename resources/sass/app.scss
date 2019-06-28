@@ -8,11 +8,16 @@
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
+html {
+  position: relative;
+  min-height: 100%;
+}
 /* universal */
 
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
+  margin-bottom: 60px;
 }
 
 /* header */
