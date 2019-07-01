@@ -15,7 +15,7 @@ if (!function_exists('appEnv')) {
 }
 
 if (!function_exists('route_class')) {
-    
+
     function route_class()
     {
         return str_replace('.', '-', Route::currentRouteName());
@@ -37,7 +37,7 @@ if (!function_exists('make_excerpt')) {
         return str_limit($excerpt, $length);
     }
 }
-    
+
 if (!function_exists('ImageUploadHandler')) {
 
     function ImageUploadHandler($file, $folder, $file_prefix, $max_width = false)

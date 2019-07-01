@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\{Topic, Category};
+use App\Models\{Topic, Category, User};
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
@@ -23,7 +23,8 @@ class TopicsController extends Controller
 
     public function show(Topic $topic)
     {
-        return view('topics.show', compact('topic'));
+		$user = User::find($topic->user_id);;
+        return view('topics.show', compact('topic', 'user'));
     }
 
 	public function create(Topic $topic)
