@@ -30,6 +30,14 @@ if (!function_exists('category_nav_active')) {
     }
 }
 
+if (!function_exists('make_excerpt')) {
+    function make_excerpt($value, $length = 200)
+    {
+        $excerpt = trim(preg_replace('/\r\n|\r|\n+/', ' ', strip_tags($value)));
+        return str_limit($excerpt, $length);
+    }
+}
+    
 if (!function_exists('ImageUploadHandler')) {
 
     function ImageUploadHandler($file, $folder, $file_prefix, $max_width = false)
