@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Models\Topic;
+use App\Models\{Topic, Reply};
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Topic::observe(\App\Observers\TopicObserver::class);
+        Reply::observe(\App\Observers\ReplyObserver::class);
     }
 }
