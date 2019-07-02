@@ -15,10 +15,11 @@ class TopicsController extends Controller
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-	public function index(Request $request, Topic $topic)
+	public function index(Request $request, Topic $topic, User $user)
 	{
-		$topics = Topic::withOrder($request->order)->paginate(10);
-		return view('topics.index', compact('topics'));
+		$topics = $topic->withOrder($request->order)->paginate(10);
+		$active_users = $user->getActiveUsers();
+		return view('topics.index', compact('topics', 'active_users'));
 	}
 
     public function show(Topic $topic)
