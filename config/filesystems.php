@@ -64,10 +64,10 @@ return [
             'url' => env('AWS_URL'),
         ],
         'admin' => [
-            'driver'     => 'local',
-            'root'       => public_path('upload'),
+            'driver' => 'local',
+            'root' => public_path('uploads'),
             'visibility' => 'public',
-            'url' => env('APP_URL').'/upload/',
+            'url' => env('APP_URL').'/uploads',
         ],
 
     ],
