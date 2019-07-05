@@ -13,6 +13,7 @@
         "fideloper/proxy": "^4.0",
         "hieu-le/active": "~3.5",
         "intervention/image": "^2.5",
+        "jxlwqq/simditor": "^1.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "mews/captcha": "~2.0",
