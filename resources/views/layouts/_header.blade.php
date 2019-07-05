@@ -42,7 +42,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @can('manage_contents')
-                            <a class="dropdown-item" href="{{ url(config('administrator.uri')) }}">
+                            <a class="dropdown-item" href="{{ url('admin') }}">
                                 <i class="fas fa-tachometer-alt mr-2"></i>
                                 管理后台
                             </a>

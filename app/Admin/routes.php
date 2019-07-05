@@ -11,6 +11,5 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('admin.home');
-    $router->resource('blog', 'BlogController')->names('admin.blog');
 
 });

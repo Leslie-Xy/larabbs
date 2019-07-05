@@ -14,7 +14,7 @@ trait LastActivedAtHelper
     public function recordLastActivedAt()
     {
         // 获取今天的日期
-        $date = Carbon::now()->toDateString();
+        $date = Carbon::yesterday()->toDateString();
 
         // Redis 哈希表的命名，如：larabbs_last_actived_at_2017-10-21
         $hash = $this->hash_prefix . $date;
