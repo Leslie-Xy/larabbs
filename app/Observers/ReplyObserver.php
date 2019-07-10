@@ -12,7 +12,7 @@ class ReplyObserver
 {
     public function creating(Reply $reply)
     {
-        $reply->content = clean($reply->content, 'user_topic_body');
+        $reply->clearXss($reply, ['content']);
     }
 
     public function created(Reply $reply)
@@ -25,7 +25,7 @@ class ReplyObserver
 
     public function updating(Reply $reply)
     {
-        //
+        $reply->clearXss($reply, ['content']);
     }
 
     public function deleted(Reply $reply)

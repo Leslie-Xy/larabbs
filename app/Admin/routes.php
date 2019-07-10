@@ -11,7 +11,7 @@ Route::group([
     'as'            => 'admin.'
 ], function (Router $router) {
 
-    $router->get('/', 'HomeController@index')->name('admin.home');
+    $router->get('/', 'UsersController@index');
     $router->resource('users', 'UsersController');
     $router->resource('roles', 'RolesController');
     $router->resource('permissions', 'PermissionsController');

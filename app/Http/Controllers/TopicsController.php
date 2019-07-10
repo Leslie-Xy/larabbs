@@ -25,7 +25,8 @@ class TopicsController extends Controller
 
     public function show(Topic $topic)
     {
-		$user = User::find($topic->user_id);;
+		$user = User::find($topic->user_id);
+		$topic->increment('view_count');
         return view('topics.show', compact('topic', 'user'));
     }
 

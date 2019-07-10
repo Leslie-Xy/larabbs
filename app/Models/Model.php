@@ -16,4 +16,11 @@ class Model extends EloquentModel
         return $query->orderBy('order', 'desc');
     }
 
+    public function clearXss($model, array $column)
+    {
+        foreach ($column as $value){
+            $model->$value = clean($model->$value, 'user_topic_body');
+        }
+    }
+
 }

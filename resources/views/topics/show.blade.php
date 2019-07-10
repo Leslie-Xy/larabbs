@@ -37,6 +37,8 @@
                         ⋅
                         <i class="far fa-comment"></i>
                         {{ $topic->reply_count }}
+                        .
+                        {{ $topic->view_count }}阅读
                     </div>
 
                     <div class="topic-body mt-4 mb-4">
