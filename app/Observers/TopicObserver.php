@@ -11,12 +11,12 @@ class TopicObserver
 {
     public function creating(Topic $topic)
     {
-        $topic->clearXss($topic, ['title', 'body']);
+        $topic->clearXss($topic, ['body']);
     }
 
     public function saving(Topic $topic)
     {
-        $topic->clearXss($topic, ['title', 'body']);
+        $topic->clearXss($topic, ['body']);
         $topic->excerpt = make_excerpt($topic->body);
     }
 
