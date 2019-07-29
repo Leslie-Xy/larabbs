@@ -4,4 +4,5 @@
 - mysql5.6
 - redis
 - nginx
-## 框架为laravel5.8
+## 框架：laravel5.8
+## 后台：laravel-admin
