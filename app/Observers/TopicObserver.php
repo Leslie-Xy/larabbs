@@ -17,7 +17,7 @@ class TopicObserver
 
     public function created(Topic $topic)
     {
-        $esModel = with(new ElasticSearchModel('topics', ''));
+        $esModel = with(new ElasticSearchModel('topics', 'Course'));
         $esModel->create([
             'id' => $topic->id,
             'title' => $topic->title,
