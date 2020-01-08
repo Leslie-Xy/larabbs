@@ -4,5 +4,6 @@
 - mysql5.6
 - redis
 - nginx
+- elasticsearch 5.4.1
 ## 框架：laravel5.8
 ## 后台：laravel-admin
