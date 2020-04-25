@@ -18,6 +18,8 @@ class TopicObserver
     public function created(Topic $topic)
     {
         $esModel = with(new ElasticSearchModel('topics', 'Course'));
+	//$sessionData = $esModel->get();
+	//dd($sessionData);
         $esModel->create([
             'id' => $topic->id,
             'title' => $topic->title,
@@ -42,5 +44,7 @@ class TopicObserver
     public function deleted(Topic $topic)
     {
         \DB::table('replies')->where('topic_id', $topic->id)->delete();
+	    $esModel = with(new ElasticSearchModel('topics', 'Course'));
+	    $esModel->delete($topic->id);
     }
 }
